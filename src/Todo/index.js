@@ -53,9 +53,11 @@ function Reducer() {
       </button>
       <ul>
         {jobs.map((job, index) => (
-          <li key={index}>
+          <li key={index} style={{ marginTop: 20 }}>
             {job}
-            <span onClick={() => dispatch(removeJob(index))}>&times;</span>
+            <span onClick={() => dispatch(removeJob(index))} style={{ padding: 5, backgroundColor: "#eee", marginLeft: 20, borderWidth: 1, borderStyle: "solid", borderColor: "#000" }}>
+              &times;
+            </span>
             <button
               style={{ marginLeft: 20 }}
               onClick={() => {
